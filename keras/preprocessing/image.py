@@ -576,7 +576,7 @@ class ImageDataGenerator(object):
         if x.ndim != 4:
             raise ValueError('Input to `.fit()` should have rank 4. '
                              'Got array with shape: ' + str(x.shape))
-        if x.shape[self.channel_axis] not in {1, 3, 4}:
+        if x.shape[self.channel_axis] not in {1, 2, 3, 4}:
             raise ValueError(
                 'Expected input to be images (as Numpy array) '
                 'following the dimension ordering convention "' + self.dim_ordering + '" '
